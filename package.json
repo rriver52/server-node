@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Basic REST API Server",
   "main": "src/index,js",
- "scruipts":{
-   "build": "babel .src --out-dir ./build",
-   "start": "node .build/index/js",
-   "dev": "nodemon --exec babel-node src/index.js"
- },
+  "scripts": {
+    "build": "babel ./src --out-dir ./build",
+    "start": "node ./build/index.js",
+    "dev": "nodemon --exec npx babel-node src/index.js"
+  },
   "author": "Reyes Rivera",
   "license": "ISC",
   "devDependencies": {
@@ -17,5 +17,8 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/runtime": "^7.17.8",
     "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
   }
 }
