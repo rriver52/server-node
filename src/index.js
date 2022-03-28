@@ -1,11 +1,29 @@
-import express from "express";
+import express from 'express'
+import helmet from 'helmet'
+import cors from 'cors'
+
+import config from './utils/config'
+import logger from './utils/logger'
+import errors from './utils/errors'
+
+import router from './routes'
 
 const app = express()
 
-const port = 3000
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
-app.get('/', (req,res) =>{
-    res.send({ msg: 'Hello There'})
-})
+app.use(logger.middleware)
+app.use(helmet())
+app.use(
+  cors({
+    origin: config.origin,
+  }),
+)
 
-app.listen(port)
+app.use(router)
+
+app.use(errors.notFound)
+app.use(errors.errorHandler)
+
+app.listen(config.port)
