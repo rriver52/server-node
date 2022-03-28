@@ -1,5 +1,5 @@
 {
-  "name": "server-node",
+  "name": "todo-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,9 +7,8 @@
     "build": "babel ./src --out-dir ./build",
     "start": "node ./build/index.js",
     "dev": "nodemon --exec npx babel-node src/index.js",
-    
+    "lint": "eslint ."
   },
-
   "author": "",
   "license": "ISC",
   "devDependencies": {
