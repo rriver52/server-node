@@ -1,5 +1,5 @@
 {
-  "name": "todo-api",
+  "name": "server-node",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -24,9 +24,11 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-prettier": "^4.0.0",
     "nodemon": "^2.0.15",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "prisma": "^3.11.1"
   },
   "dependencies": {
+    "@prisma/client": "^3.5.0",
     "consola": "^2.15.3",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
@@ -35,6 +37,7 @@
     "http-status-codes": "^2.1.4",
     "joi": "^17.4.2",
     "morgan": "^1.10.0",
-    "nanoid": "^3.1.30"
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0"
   }
 }
